@@ -10,6 +10,7 @@ export default class BarcodeScanner extends NavigationMixin(LightningElement) {
 
     // When the component is initialized, determine whether to enable the Scan button
     connectedCallback() {
+        console.log('Test Updated')
         this.myScanner = getBarcodeScanner();
         if (this.myScanner?.isAvailable()) {
             this.scanButtonEnabled = true;
